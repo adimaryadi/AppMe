@@ -1,0 +1,16 @@
+.profil-image {
+    position: relative;
+    width: 100%;
+    background-color: #4285f4;
+    height: 210px;  
+    .image {
+        overflow: hidden;
+        width: 121px;
+        margin: auto;
+        top: 29px;
+        position: relative;
+        img {
+            border-radius: 81px;
+        }        
+    }  
+}

@@ -2,12 +2,22 @@
   <ion-toolbar>
     <ion-title>
         <div class="menu-bar">
-          <ion-icon name="menu" class="main"></ion-icon>
-        </div>
+          <ion-icon name="menu" class="main" (click)="menuOpen()"></ion-icon> 
+          <div class="cari">
+            <ion-searchbar animate="true" showCancelButton cancelButtonText="Custom Cancel"></ion-searchbar>             
+          </div> 
+          <div class="btn-cari">
+            <ion-icon name="search" (click)="cari()" class="pencarian"></ion-icon>
+            <ion-icon name="close" (click)="tutupcari()" class="tutuppencarian"></ion-icon>
+          </div>                       
+        </div>               
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
+<app-menu></app-menu>
+
 <ion-content>
 
 </ion-content>
+

@@ -1,7 +1,32 @@
 .welcome-card ion-img {
   max-height: 35vh;
   overflow: hidden;
-  .menu-bar {
-    
+}
+.menu-bar {
+  .main {
+    font-size: 1.3em;
   }
+  .btn-cari {
+    position: absolute;
+    top: 1px;
+    right: 12px;
+    font-size: 1.3em;    
+    .tutuppencarian {
+      opacity: 0;
+      transition: visibility 0s, opacity 0.5s linear;
+    }
+    .pencarian {
+      position: absolute;
+      z-index: 1;
+    }
+  }
+}
+
+.cari {
+  position: absolute;
+  top: -8px;
+  right: 46px;
+  opacity: 0;
+  visibility: hidden;
+  transition: visibility 0s, opacity 0.5s linear;
 }
