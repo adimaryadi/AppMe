@@ -6,7 +6,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { VerifikasiPage } from './verifikasi.page';
-
+import { BrMaskerModule } from 'brmasker-ionic-3';
 const routes: Routes = [
   {
     path: '',
@@ -19,6 +19,7 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     IonicModule,
+    BrMaskerModule,
     RouterModule.forChild(routes)
   ],
   declarations: [VerifikasiPage]

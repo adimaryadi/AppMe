@@ -15,7 +15,7 @@ export class VerifikasiPage implements OnInit {
       this.headercolor.tint('#48d843');
       this.platform.ready().then(() => {
         document.addEventListener('backbutton', () => {
-
+          navigator['app'].exitApp();
         });
       });
   }
