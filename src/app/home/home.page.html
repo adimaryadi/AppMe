@@ -1,0 +1,14 @@
+<ion-content no-padding >
+  <div class="konten">
+    <div class="verifikasi_nomor">
+      <div class="nomor-group">
+          <ion-item>
+            <ion-input type="text" name="number_phone" placeholder="Phone" #nomor (input)="Detect(nomor.value)" [brmasker]="{mask:'000-000-000-00', len:16,type: 'num'}"></ion-input>
+          </ion-item>    
+          <div class="btn-opsi">
+            <ion-button color="success" expand="full" (click)="Verifikasi()">Verifikasi</ion-button>
+          </div>
+      </div>  
+    </div>
+  </div>
+</ion-content>

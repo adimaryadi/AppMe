@@ -1,0 +1,22 @@
+.konten {
+    background-image: url(/assets/img/background.png);
+    background-size: cover;
+    height: 100%;    
+    background-position: center;
+    .verifikasi_nomor {
+        position: relative;
+        top: 247px;
+        .nomor-group {
+            width: 226px;
+            margin: auto;            
+            ion-input {
+                position: relative;
+                height: 44px;                
+            }
+            .btn-opsi {
+                position: relative;
+                top: 29px;
+            }
+        }        
+    }
+}
