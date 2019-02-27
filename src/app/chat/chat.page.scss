@@ -67,8 +67,47 @@ ion-icon {
 ion-footer {
     position: fixed;
     bottom: 10px;    
-    ion-input {
-        border-radius: 39px;
-        background-color: white;        
+    .box-chatting {
+        padding-right: 55px;
+        ion-textarea {
+            background-color: white;
+            border-radius: 74px;
+            height: 37px;
+            padding-left: 37px;
+            padding-right: 72px;
+            padding-top: 0px;          
+        }
+        .smile {
+            position: absolute;
+            top: 6px;
+            font-size: 1.6em;
+            z-index: 2;
+            color: #9ea3a5;            
+        }
+        .options {
+            position: absolute;
+            z-index: 2;
+            right: 59px;
+            top: 6px;
+            font-size: 1.6em;
+            color: #9ea3a5;            
+        }
+        .send-btn {
+            position: absolute;
+            top: 0px;
+            z-index: 2;
+            right: 8px;
+            button {
+                background-color: #48d843;
+                height: 40px;
+                border-radius: 27px;
+                width: 42px;
+                color: white;
+                font-size: 1.6em;
+                ion-icon {
+                    margin: 5px;                    
+                }                
+            }            
+        }
     }
 }
