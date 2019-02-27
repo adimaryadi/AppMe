@@ -6,7 +6,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { ChatPage } from './chat.page';
-
+// import { SocketIoModule, SocketIoConfig } from 'ng6-socket-io';
 const routes: Routes = [
   {
     path: '',
@@ -14,12 +14,15 @@ const routes: Routes = [
   }
 ];
 
+// const config: SocketIoConfig = { url: 'http://localhost/infiplus/' , options: {} };
+  
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
     RouterModule.forChild(routes)
+    // SocketIoModule.forRoot(config)
   ],
   declarations: [ChatPage]
 })

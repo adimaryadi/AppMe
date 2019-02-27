@@ -2,7 +2,7 @@
     font-size: 1.8em;
     position: relative;
     top: 4px;
-    left: 6px;    
+    left: 0;    
 }
 .img-usr {
     position: absolute;
@@ -18,4 +18,57 @@
 ion-header {
     background-color: #48d843;
     color: white;  
+}
+.msg-user {
+    position: absolute;
+    top: 0px;
+    left: 95px;
+    font-size: 1.4em;
+    font-weight: 400;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 38%;
+    overflow: hidden;
+    p {
+        margin-top: 11px;
+    }    
+}
+.video-call {
+    position: absolute;
+    top: 13px;
+    right: 43px;
+    font-size: 1.9em;    
+}
+ion-icon {
+    margin-left: 7px;
+    margin-right: 7px;    
+}
+.bg-msg {
+    background-image: url(/assets/img/msg_background_default.png);
+    background-size: cover;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;   
+}
+.more {
+    position: absolute;
+    top: 14px;
+    right: 3px;
+    font-size: 1.8em;    
+}
+.more-select {
+    position: absolute;
+    z-index: 2;
+    top: 58px;
+    right: 0;
+    opacity: 0;  
+    transition: visibility 0s, opacity 0.6s linear;
+}
+ion-footer {
+    position: fixed;
+    bottom: 10px;    
+    ion-input {
+        border-radius: 39px;
+        background-color: white;        
+    }
 }
