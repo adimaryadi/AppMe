@@ -4,14 +4,14 @@ import { TabsPage } from './tabs.page';
 
 const routes: Routes = [
   {
-    path: 'tabs',
+    path: '',
     component: TabsPage,
     children: [
       {
         path: 'tab1',
         children: [
           {
-            path: 'tabs',
+            path: '',
             loadChildren: '../tab1/tab1.module#Tab1PageModule'
           }
         ]
@@ -20,7 +20,7 @@ const routes: Routes = [
         path: 'tab2',
         children: [
           {
-            path: 'tabs',
+            path: '',
             loadChildren: '../tab2/tab2.module#Tab2PageModule'
           }
         ]
@@ -29,7 +29,7 @@ const routes: Routes = [
         path: 'tab3',
         children: [
           {
-            path: 'tabs',
+            path: '',
             loadChildren: '../tab3/tab3.module#Tab3PageModule'
           }
         ]

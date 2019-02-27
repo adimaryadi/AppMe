@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { MenuController } from '@ionic/angular';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-tab1',
@@ -8,7 +9,7 @@ import { MenuController } from '@ionic/angular';
 })
 export class Tab1Page {
 
-  constructor(private menu: MenuController) {}
+  constructor(private menu: MenuController,private route: Router) {}
 
   menuOpen() {
     this.menu.enable(true,'pesan');
@@ -19,6 +20,7 @@ export class Tab1Page {
      let caristyle            =    document.getElementsByClassName('cari') as HTMLCollectionOf<HTMLElement>; 
      if (caristyle.length != 0) {
         caristyle[0].style.opacity = "1";
+        caristyle[0].style.zIndex  = "1";
         caristyle[0].style.visibility = "visible";
      }
 
@@ -38,6 +40,7 @@ export class Tab1Page {
     let caristyle           =    document.getElementsByClassName('cari') as HTMLCollectionOf<HTMLElement>;
     if (caristyle.length != 0) {
       caristyle[0].style.opacity      =   "0";
+      caristyle[0].style.zIndex       =   "-1";
       caristyle[0].style.visibility   =   "visibility 0s, opacity 0.5s linear";
     }
     let btnpencarian        =    document.getElementsByClassName('pencarian') as HTMLCollectionOf<HTMLElement>;
@@ -50,5 +53,9 @@ export class Tab1Page {
     if (btntutuppencarian.length != 0) {
       btntutuppencarian[0].style.opacity    =   "0";
     }
+  }
+
+  Chat() {
+    this.route.navigateByUrl('chat/' + '1');
   }
 }

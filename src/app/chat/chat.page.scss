@@ -1,0 +1,21 @@
+.back-msg {
+    font-size: 1.8em;
+    position: relative;
+    top: 4px;
+    left: 6px;    
+}
+.img-usr {
+    position: absolute;
+    top: 8px;
+    height: 47px;
+    text-align: center;
+    left: 32px;
+    img {
+        width: 42px;
+        height: 41px;        
+    }    
+}
+ion-header {
+    background-color: #48d843;
+    color: white;  
+}
