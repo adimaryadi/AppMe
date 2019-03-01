@@ -22,7 +22,7 @@
 </ion-header>
 
 <div class="more-select">
-  <ion-list >
+  <ion-list>
     <ion-item >
       <ion-label>Buka chatme di pc</ion-label>
     </ion-item>
@@ -33,13 +33,41 @@
 </div>
 <ion-content no-padding>
 <div class="bg-msg" (click)="body_klik()">
+    <div class="chat-box">
 
+      <div class="chat-from">
+        <div class="name-from">
+          <p>adimaryadi</p>
+        </div>
+        <div class="profil-msg">
+            <ion-avatar>
+                <img src="/assets/img/me.jpg">
+            </ion-avatar>         
+        </div>
+        <p>pesan coba tes </p>
+        <span class="time-msg">10:34</span>
+      </div>
+
+      <div class="chat-me">
+        <p>coba sajaasdijaisjdisjdisdjishduhdudhdgywgaysgydaygdyasyd </p>
+        <div class="time-msg">
+          <p>11:22</p>
+          <div class="status-sent">
+            <ion-icon name="time"></ion-icon>
+          </div>
+        </div>
+        <div class="name-me">
+          <p>me</p>
+        </div>
+      </div>
+
+    </div>
 </div>
 </ion-content>
 
 <ion-footer>
     <div class="box-chatting">
-        <ion-textarea></ion-textarea>
+        <ion-textarea #pesan (input)="MessageInput(pesan.value)"></ion-textarea>
         <div class="smile">
             <ion-icon name="happy"></ion-icon>
         </div>
@@ -48,7 +76,8 @@
             <ion-icon name="camera"></ion-icon>
         </div>
         <div class="send-btn">
-          <button ion-button fill="outline"><ion-icon name="send"></ion-icon></button>
+          <button ion-button fill="outline" class="btn_send" (click)="Kirim()"><ion-icon name="send"></ion-icon></button>
+          <button ion-button fill="outline" class="voice" (click)="PesanSuara()"><ion-icon name="mic"></ion-icon></button>
         </div>
     </div>
 </ion-footer>

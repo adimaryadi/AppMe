@@ -31,4 +31,32 @@ export class ChatPage implements OnInit {
       more[0].style.opacity     =   "0";
     }
   }
+
+  MessageInput(value: string) {
+    if (value.length >= 1) {
+       let pesan  =   document.getElementsByClassName('btn_send') as HTMLCollectionOf<HTMLElement>;
+       pesan[0].style.opacity   =   "1";
+       pesan[0].style.zIndex    =   "1";
+
+       let voice  =   document.getElementsByClassName('voice') as HTMLCollectionOf<HTMLElement>;
+       voice[0].style.opacity   =   "0";
+       voice[0].style.zIndex    =   "-1";
+    } else {
+       let pesan   =   document.getElementsByClassName('btn_send') as HTMLCollectionOf<HTMLElement>;
+       pesan[0].style.opacity    =   "0";
+       pesan[0].style.zIndex     =   "-1";
+
+      let voice    =   document.getElementsByClassName('voice') as HTMLCollectionOf<HTMLElement>;
+      voice[0].style.opacity     =   "1";
+      voice[0].style.zIndex      =   "1";
+    }
+  }
+
+  Kirim() {
+    console.log('Pesan kirim');
+  }
+
+  PesanSuara() {
+    console.log('pesan suara');
+  }
 }

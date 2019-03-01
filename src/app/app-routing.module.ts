@@ -4,7 +4,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   { path: 'tabs', loadChildren: './tabs/tabs.module#TabsPageModule' },
   { path: '', loadChildren: './home/home.module#HomePageModule' },
-  { path: 'verifikasi', loadChildren: './verifikasi/verifikasi.module#VerifikasiPageModule' },
+  { path: 'verifikasi/:nomor', loadChildren: './verifikasi/verifikasi.module#VerifikasiPageModule' },
   { path: 'chat/:user', loadChildren: './chat/chat.module#ChatPageModule' }
 ];
 @NgModule({

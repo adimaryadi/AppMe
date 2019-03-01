@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AlertController } from '@ionic/angular';
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.page.html',
@@ -30,7 +31,7 @@ export class HomePage implements OnInit {
        });
        alert.present();
     } else {
-      this.router.navigateByUrl('verifikasi');
+      this.router.navigateByUrl('verifikasi/'+ this.nomor);
     }
   }
 }
