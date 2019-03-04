@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Socket } from 'ngx-socket-io';
+import { ChatserviceService } from './chatservice.service';
 
 @Component({
   selector: 'app-chat',
@@ -8,10 +10,10 @@ import { Router } from '@angular/router';
 })
 export class ChatPage implements OnInit {
 
-  constructor(private route: Router) { }
+  constructor(private route: Router, private servicechat: ChatserviceService) { }
 
   ngOnInit() {
-    
+
   }
 
   back_msg() {
@@ -25,6 +27,7 @@ export class ChatPage implements OnInit {
         more[0].style.opacity   =   "1";
     }
   }
+
   body_klik() {
     let more  =     document.getElementsByClassName('more-select') as HTMLCollectionOf<HTMLElement>;
     if (more.length != 0) {
@@ -32,7 +35,9 @@ export class ChatPage implements OnInit {
     }
   }
 
+  pesan_text      =     null;
   MessageInput(value: string) {
+    this.pesan_text     =   value;
     if (value.length >= 1) {
        let pesan  =   document.getElementsByClassName('btn_send') as HTMLCollectionOf<HTMLElement>;
        pesan[0].style.opacity   =   "1";
@@ -53,7 +58,8 @@ export class ChatPage implements OnInit {
   }
 
   Kirim() {
-    console.log('Pesan kirim');
+    this.servicechat.KirimPesan(this.pesan_text);
+    this.servicechat.AmbilPesan();
   }
 
   PesanSuara() {

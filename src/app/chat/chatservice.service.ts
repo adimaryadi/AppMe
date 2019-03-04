@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Socket } from 'ng6-socket-io';
+import { Socket } from 'ngx-socket-io';
 import { map } from "rxjs/operators";
 
 @Injectable({
@@ -10,11 +10,12 @@ export class ChatserviceService {
   constructor(private socket: Socket) { }
 
   KirimPesan(pesan: string) {
-    this.socket.emit("message", pesan);
+    this.socket.emit("pesan", pesan);
   }
 
   AmbilPesan() {
-    return this.socket.fromEvent("message")
-               .pipe(map(data => console.log(data)));
+    this.socket.on('ionicsend', function(pesan) {
+      console.log(pesan);
+    });
   }
 }
